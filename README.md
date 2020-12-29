@@ -15,3 +15,11 @@ Install Instructions
 ```docker-compose up```
 
 4. Import postman collection and test
+
+
+POSTMAN
+
+- Signup: Registrar un nuevo usuario
+- Login: Loguearse con un usuario
+- Historial: Mostrar todos los endpoints
+- Multiply: Multiplicar dos numeros
