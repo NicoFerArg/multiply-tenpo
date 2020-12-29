@@ -1,8 +1,26 @@
 version: '2'
+
 services:
+
+  app: 
+    image: 'multiplytenpo:latest'
+    build:
+      context: .
+    container_name: app
+    ports:
+      - "8080:8080"
+    depends_on:
+      - postgres
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres:5432/postgres
+      - SPRING_DATASOURCE_USERNAME=postgres
+      - SPRING_DATASOURCE_PASSWORD=postgres
+      - SPRING_JPA_HIBERNATE_DDL_AUTO=update
+
   postgres:
     image: 'postgres:latest'
     restart: always
+    container_name: postgres
     volumes:
       - './postgres_data:/var/lib/postgresql/data'
     environment:
