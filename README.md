@@ -8,7 +8,7 @@ Install Instructions
 
 2.- Compile the app.
 
-```mvn clean install```
+```mvn clean install -DskipTests```
 
 3. Run docker compose
 
